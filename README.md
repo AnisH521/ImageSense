@@ -16,5 +16,5 @@ Before running the application, ensure you have the following software and libra
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/kivy-image-classifier.git
-   cd kivy-image-classifier
+   git clone https://github.com/AnisH521/ImageSense.git
+   cd ImageSense
