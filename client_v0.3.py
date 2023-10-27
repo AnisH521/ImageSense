@@ -12,8 +12,10 @@ class ImageClientApp(App):
     def build(self):
         layout = BoxLayout(orientation="horizontal")
 
-        self.image = Image()
         layout_left = BoxLayout(orientation="vertical")
+        self.logo = Image(source="mustlogowhite.png", size_hint=(0.1, 0.1))
+        layout_left.add_widget(self.logo)
+        self.image = Image()
         layout_left.add_widget(self.image)
 
         layout_right = BoxLayout(orientation="vertical", size_hint=(0.6, 1))
@@ -41,7 +43,7 @@ class ImageClientApp(App):
         img_bytes = cv2.imencode(".jpg", captured_image)[1].tobytes()
 
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket.connect(("server_ip", 2345))
+        client_socket.connect(("192.168.0.173", 2345))
 
         # Send the size of the image
         img_size = len(img_bytes).to_bytes(8, byteorder='big')
