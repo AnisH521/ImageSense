@@ -41,7 +41,7 @@ class ImageClientApp(App):
         img_bytes = cv2.imencode(".jpg", captured_image)[1].tobytes()
 
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket.connect(("192.168.0.39", 2345))
+        client_socket.connect(("server_ip", 2345))
 
         # Send the size of the image
         img_size = len(img_bytes).to_bytes(8, byteorder='big')
