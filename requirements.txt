@@ -1,0 +1,12 @@
+# Kivy and Kivy-related packages
+kivy==2.2.1
+kivy.deps.glew
+kivy.deps.sdl2
+pyjnius
+
+# OpenCV (cv2)
+opencv-python-headless==4.8.1.78
+
+# Standard libraries
+socket
+os
